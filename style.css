@@ -8,10 +8,19 @@
  /* General */
 
  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
 }
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 
 a {
     color: #333;
@@ -38,23 +47,19 @@ header{
     z-index: 100;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 header .container {
     display: flex;          /* Makes children align in a row (horizontally) instead of stacking */
     justify-content: space-between;   /* Spreads out the children evenly, pushing logo left, nav center, button right */
-    align-items: center;    /* Vertically centers the children in the container */
+    align-items: center;  
+    padding: 20px  /* Vertically centers the children in the container */
 }
 
 .logo {
     /* margin-bottom removed */
 }
 
-nav ul {
+ nav ul {
     display: flex;
 }
  nav ul li {
@@ -82,3 +87,129 @@ nav ul li a:hover:after,
 nav ul li a.active:after {
     width: 100%;
 }
+
+/* Body Section (Split in Half) */
+.section-1 {
+    padding: 40px 0;
+}
+
+.split-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-half, .left-half {
+    flex: 1 1 0;
+}
+
+.right-half {
+    text-align: center;
+}
+
+.left-half h2 {
+
+}
+
+.left-half p {
+    
+
+}
+
+.right-half h2 {
+    text-align: center;
+}
+
+.feature-list {
+
+}
+
+.feature-list li {
+    
+}
+
+/* Reviews Section */
+
+.section-2 {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+.reviews-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;  /* adds space between the headings */
+}
+
+/* Transformational Cleaning Result Section */
+
+.section-3 {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.section-3 h2 {
+    font-size: 24px;        
+    margin-bottom: 20px;
+}
+
+.picture_container {
+    display: flex;
+}
+
+.picture_container h2 {
+    flex: 1 1 0;
+    text-align: center;
+}
+
+.section-3 .lower-section {
+    text-align: center;
+}
+
+/* Get Your Free Estimate Section */
+
+.section-4 {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+.section-4 h2 {
+
+}
+
+.section-4 .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Our Customers Before and After Section */
+
+.section-5 {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.image_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(80px, 1fr));
+    gap: 15px;
+}   
+
+
+.section-5 .cell {
+    border: 1px solid black;
+    aspect-ratio: 2/1;
+}
+
+/* Footer Section */   
+
+footer {
+    display: flex;
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
