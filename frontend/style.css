@@ -51,8 +51,7 @@ header{
 header .container {
     display: flex;          /* Makes children align in a row (horizontally) instead of stacking */
     justify-content: space-between;   /* Spreads out the children evenly, pushing logo left, nav center, button right */
-    align-items: center;  
-    padding: 20px  /* Vertically centers the children in the container */
+    align-items: center;    /* Vertically centers the children in the container */
 }
 
 .logo {
@@ -104,6 +103,8 @@ nav ul li a.active:after {
 }
 
 .right-half {
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -116,9 +117,85 @@ nav ul li a.active:after {
 
 }
 
-.right-half h2 {
-    text-align: center;
+.widget-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal columns */
+    align-items: start; /* Aligns items to the top */
 }
+
+.right-half h2 {
+    
+}
+
+/* Form Section */
+
+
+
+.form-container {
+    max-width: 400px;
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin: 0 auto;
+}
+.form-container h1{
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px; /* Space between items */
+}
+
+form {
+    max-width: 300px;
+    width: 100%;
+    margin: 20px auto;
+    }
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s
+  }
+
+input:focus, textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+  }
+  
+  textarea {
+    height: 120px;
+    resize: vertical;
+  }
+  
+  button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s;
+    }
+
+button:hover {  
+    background-color: #3a7bc8;
+}
+
 
 .feature-list {
 
